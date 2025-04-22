@@ -50,7 +50,6 @@ const CourseDetailPage = () => {
   
     const handleReview = async () => {
       const formData = new FormData()
-      const router = useSearchParams()
       const id = router.get('id')
       formData.append("course_id", course_id)
       formData.append("name", name)
