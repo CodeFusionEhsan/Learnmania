@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 
 export async function GET(req) {
     if (req.method == "GET") {
-        await mongoose.connect("mongodb+srv://ehsan:ehsan2024@cluster0.vqrb8yl.mongodb.net/Learnmania?retryWrites=true&w=majority")
+        await mongoose.connect(process.env.MONGO_URI)
                         console.log("Connected to database")
         const courses = await Course.find()
         console.log(courses)
