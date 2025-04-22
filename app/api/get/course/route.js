@@ -9,7 +9,7 @@ export async function POST(req, Response) {
     const id = formData.get("id")
 
     if (id) {
-       await mongoose.connect("mongodb+srv://ehsan:ehsan2024@cluster0.vqrb8yl.mongodb.net/Learnmania?retryWrites=true&w=majority")
+       await mongoose.connect(process.env.MONGO_URI)
             console.log("Connected to database")
       let result = []
 
