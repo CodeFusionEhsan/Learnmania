@@ -7,7 +7,7 @@ export async function POST(req) {
         const data = await req.formData()
         const id = data.get("id")
         console.log(id)
-        await mongoose.connect("mongodb+srv://ehsan:ehsan2024@cluster0.vqrb8yl.mongodb.net/Learnmania?retryWrites=true&w=majority")
+        await mongoose.connect(process.env.MONGO_URI)
                         console.log("Connected to database")
         const courses = await Enrollment.find({enrolled_by: id})
         console.log(courses)
