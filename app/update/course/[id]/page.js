@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useUser } from '@auth0/nextjs-auth0/client';
 import { useSearchParams } from 'next/navigation'
-import Link from 'next/navigation';
+import Link from 'next/link';
 
 const UploadPage = () => {
   const { user, error, isLoading } = useUser();
