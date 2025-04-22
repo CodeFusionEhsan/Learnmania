@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { useUser } from '@auth0/nextjs-auth0/client';
 import { useAuth0 } from "@auth0/auth0-react";
-import Link from 'next/navigation';
+import Link from 'next/link';
 import { useState } from 'react';
 import CoursesGrid from '@/components/coursegrid';
 import CoursesGrid2 from '@/components/coursegrid2';
