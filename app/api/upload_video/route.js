@@ -13,7 +13,7 @@ export async function POST(req, Response) {
     console.log(vt, resource, desc)
 
     if (vt && desc && resource) {
-       await mongoose.connect("mongodb+srv://ehsan:ehsan2024@cluster0.vqrb8yl.mongodb.net/Learnmania?retryWrites=true&w=majority")
+       await mongoose.connect(process.env.MONGO_URI)
             console.log("Connected to database") 
 
        const obj = {
