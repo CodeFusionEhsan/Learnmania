@@ -53,7 +53,7 @@ const VideoPage = ({params}) => {
             const parsedvideo = JSON.parse(c.videos[keydata].video)
             console.log(parsedvideo)
             return(
-                <div className="container mx-auto p-6 rounded-lg shadow-xl bg-white">
+                <div key={index} className="container mx-auto p-6 rounded-lg shadow-xl bg-white">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {/* Left Side: Main Video */}
                   <div className="rounded-lg overflow-hidden">
