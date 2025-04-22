@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { useUser } from '@auth0/nextjs-auth0/client';
+import Link from 'next/navigation';
 
 const UploadPage = () => {
   const { user, error, isLoading } = useUser();
@@ -305,9 +306,9 @@ const UploadPage = () => {
     <p className="text-center mb-8 max-w-md">
         Join us to unlock a world of knowledge and enhance your skills. Sign in to access your personalized dashboard and start creating amazing courses!
     </p>
-    <a href="/api/auth/login" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
+    <Link href="/api/auth/login" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
         Login to Your Account
-    </a>
+    </Link>
 </div>
     </div>
     }
