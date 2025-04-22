@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import Course from '../../../models/Course'
+import Course from '../../../../models/Course'
 import { writeFile } from "fs/promises";
 import path from "path";
 import {NextResponse} from 'next/server'
