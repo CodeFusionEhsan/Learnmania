@@ -9,6 +9,9 @@ export async function POST(req, Response) {
     const course_id = formData.get("course_id")
 
     if (course_id) {
+         await mongoose.connect(process.env.MONGO_URI)
+              console.log("Connected to database")
+        
       const result = await Course.deleteOne({_id: course_id})
 
       if (result) {
