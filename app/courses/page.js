@@ -33,7 +33,7 @@ const Courses = () => {
             <h3 className="mt-4 text-xl font-semibold">{course.ct}</h3>
             <p className="mt-2 text-gray-400">Uploaded by {course.uploaded_by}</p>
             <p className="mt-2 text-gray-400">Total Students: {course.total_students}</p>
-            <a href={`/course/${course._id}`} className="mt-4 block bg-blue-500 hover:bg-blue-600 text-center text-white font-bold py-2 px-4 rounded transition duration-200">
+            <a href={`/course/view/${course._id}`} className="mt-4 block bg-blue-500 hover:bg-blue-600 text-center text-white font-bold py-2 px-4 rounded transition duration-200">
               Check Out Course
             </a>
           </div>
