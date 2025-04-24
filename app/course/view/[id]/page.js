@@ -101,6 +101,10 @@ const CourseDetailPage = () => {
     return <div className="flex justify-center items-center h-screen">Loading course details...</div>;
   }
 
+    const handleredirect = (key, c_id) => {
+    window.location = `/course/admin/video/${c_id}/${key}`
+  }
+
   return (
     <div className="bg-gray-100 min-h-screen py-10">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
@@ -152,8 +156,8 @@ const CourseDetailPage = () => {
                 <source src={parsedvideo.public_id} type="video/mp4"/>
               </video>
               <div>
-                <h4 className="font-semibold">{video.title}</h4>
-                <p className="text-gray-600">Uploaded By: {course.uploaded_by}</p>
+                <h4 onClick={() => {handleredirect(index, course[0]._id)}} className="font-semibold">{video.title}</h4>
+                <p className="text-gray-600">Uploaded By: {course[0].uploaded_by}</p>
               </div>
             </div>
             )
