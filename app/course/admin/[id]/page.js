@@ -19,7 +19,7 @@ const CoursePage = () => {
   const getCourse = async () => {
     const formData = new FormData()
     const url = window.location.href
-    const id = url.replace("http://localhost:3000/course/admin/", "")
+    const id = url.replace("http://learnmania.vercel.app/course/admin/", "")
     console.log(id)
     formData.append("id", id)
 
