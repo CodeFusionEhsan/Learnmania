@@ -33,13 +33,13 @@ const HomePage = () => {
           <p className="text-lg mb-8">Learn new skills, advance your career, and connect with a community of learners.</p>
           <div className="flex justify-center space-x-4">
             <button
-              onClick={() => {}}
+              onClick={() => {window.location="/courses"}}
               className="bg-white text-indigo-600 font-semibold py-3 px-6 rounded-full hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75"
             >
               Explore Courses
             </button>
             <button
-              onClick={() => {}}
+              onClick={() => {window.location="/upload"}}
               className="bg-purple-400 text-white font-semibold py-3 px-6 rounded-full hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-75"
             >
               Upload a Course
@@ -120,7 +120,7 @@ const HomePage = () => {
                   <p className="text-gray-500 text-sm mb-1">Uploaded by: {course.uploaded_by}</p>
                   <p className="text-gray-500 text-sm">Students: {course.skills}</p>
                   <button
-                    onClick={() => {}} // Example dynamic route
+                    onClick={() => { window.location = `/course/view/${course._id}`}} // Example dynamic route
                     className="mt-3 bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75 text-sm"
                   >
                     View Course
