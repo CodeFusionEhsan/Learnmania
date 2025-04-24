@@ -71,8 +71,7 @@ const AnimatedNavbar = () => {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <MobileNavLink href="/">Home</MobileNavLink>
           <MobileNavLink href="/courses">Courses</MobileNavLink>
-          <MobileNavLink href="/progress">Your Progress</MobileNavLink>
-          <MobileNavLink href="/progress">Account</MobileNavLink>
+          <MobileNavLink href="/account">Account</MobileNavLink>
           <MobileNavLink href="/upload">Upload Course</MobileNavLink>
         </div>
       </div>
