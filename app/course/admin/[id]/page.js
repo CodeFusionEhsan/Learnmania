@@ -47,7 +47,7 @@ const CoursePage = () => {
   const handleOnClick = async () => {
     const formData = new FormData()
     const url = window.location.href
-    const id = url.replace("http://localhost:3000/course/admin/", "")
+    const id = url.replace("https://learnmania.vercel.app/course/admin/", "")
     formData.append("course_id", id)
     formData.append("resource", JSON.stringify(resource))
     formData.append("vt", title)
@@ -69,7 +69,7 @@ const CoursePage = () => {
 
   const handleDelete = async () => {
     const formData = new FormData()
-    const id = url.replace("http://localhost:3000/course/admin/", "")
+    const id = url.replace("https://learnmania.vercel.app/course/admin/", "")
     formData.append("course_id", id)
 
     const res = await fetch('/api/delete/course', {
