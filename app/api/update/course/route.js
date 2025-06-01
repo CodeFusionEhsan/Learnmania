@@ -20,16 +20,13 @@ export async function POST(req, Response) {
     console.log(ct, cd, file, uploaded_by, category, prerequisites, patreon, skills, uploaded_at, instruc)
 
     if (uploaded_by && ct) {
-      const buffer = Buffer.from(await file.arrayBuffer())
-      const filename = Date.now() + file.name.replaceAll(" ", "_")
-      await writeFile(path.join(process.cwd(), "public/images/"+ filename), buffer)
       await mongoose.connect(process.env.MONGO_URI)
       console.log("Connected to database")
 
       const newupdate = {
         ct: ct,
         cd: cd,
-        image: filename,
+        image: file,
         uploaded_by: uploaded_by,
         category: category,
         instructors: instruc,
