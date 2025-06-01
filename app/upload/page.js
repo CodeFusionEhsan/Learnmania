@@ -187,7 +187,7 @@ const UploadPage = () => {
                         >
                           {({ open }) => {
                             function handleOnClick(e) {
-                              e.preventDefault(
+                              e.preventDefault()
                               setResource("");
                               setPreviewImage("")
                               open();
