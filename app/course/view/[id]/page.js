@@ -112,7 +112,7 @@ const CourseDetailPage = () => {
           {/* Left Side: Course Preview and Details */}
           <div className="md:w-1/2 p-6">
             <div className="relative w-full h-80 md:h-auto rounded-md overflow-hidden mb-4">
-            <img src={`/images/${course[0].image}`} alt={course[0].ct} className="rounded-lg mb-4 w-full h-60 object-cover" />
+            <img src={`${course[0].image}`} alt={course[0].ct} className="rounded-lg mb-4 w-full h-60 object-cover" />
             </div>
             <h2 className="text-2xl font-semibold text-gray-800 mb-2">{course[0].ct}</h2>
             <p className="text-gray-600 mb-4">{course[0].cd}</p>
