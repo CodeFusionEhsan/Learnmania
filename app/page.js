@@ -108,7 +108,7 @@ const HomePage = () => {
             {courses.map((course) => (
               <div key={course.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative w-full h-48">
-                  <Image
+                  <img
                     src={`${course.image}`}
                     alt={course.ct}
                     layout="fill"
