@@ -186,13 +186,14 @@ const UploadPage = () => {
                           }}
                         >
                           {({ open }) => {
-                            function handleOnClick() {
+                            function handleOnClick(e) {
+                              e.preventDefault(
                               setResource("");
                               setPreviewImage("")
                               open();
                             }
                             return (
-                              <button onClick={handleOnClick}>
+                              <button type="button" onClick={handleOnClick}>
                                 Upload Course Image
                               </button>
                             );
