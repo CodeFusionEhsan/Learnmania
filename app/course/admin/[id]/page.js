@@ -97,7 +97,7 @@ const CoursePage = () => {
          <div className="w-full md:w-1/2 p-4">
          <div className="bg-white shadow-lg rounded-lg p-6">
            <h2 className="text-2xl font-bold mb-4">{course[0].ct}</h2>
-           <img src={`/images/${course[0].image}`} alt={course[0].ct} className="rounded-lg mb-4 w-full h-48 object-cover" />
+           <img src={`${course[0].image}`} alt={course[0].ct} className="rounded-lg mb-4 w-full h-48 object-cover" />
            <p className="text-gray-700 mb-6">{course[0].cd}</p>
            <Link
                 href={`/update/course/${course[0]._id}`}
