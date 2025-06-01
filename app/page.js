@@ -109,7 +109,7 @@ const HomePage = () => {
               <div key={course.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative w-full h-48">
                   <Image
-                    src={`/images/${course.image}`}
+                    src={`${course.image}`}
                     alt={course.ct}
                     layout="fill"
                     objectFit="cover"
