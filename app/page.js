@@ -106,13 +106,13 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courses.map((course) => (
-              <div key={course.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div key={course._id} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative w-full h-48">
                   <img
                     src={`${course.image}`}
                     alt={course.ct}
                     layout="fill"
-                    objectFit="cover"
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-4">
