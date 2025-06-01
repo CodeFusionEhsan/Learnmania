@@ -29,7 +29,12 @@ const Courses = () => {
       <div className="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {courses.map(course => (
           <div key={course._id} className="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <img src={`${course.image}`} alt={course.ct} className="h-40 w-full object-cover rounded-t-lg" />
+            <img
+                    src={`${course.image}`}
+                    alt={course.ct}
+                    layout="fill"
+                    className="h-40 w-full object-cover rounded-t-lg"
+            />
             <h3 className="mt-4 text-xl font-semibold">{course.ct}</h3>
             <p className="mt-2 text-gray-400">Uploaded by {course.uploaded_by}</p>
             <p className="mt-2 text-gray-400">Total Students: {course.total_students}</p>
