@@ -1,7 +1,8 @@
 "use client";
 import { useState } from 'react';
 import { useUser } from '@auth0/nextjs-auth0/client';
-import Link from 'next/link';
+import Link from 'next/link'
+import { CldUploadWidget } from 'next-cloudinary';
 
 const UploadPage = () => {
   const { user, error, isLoading } = useUser();
@@ -13,9 +14,9 @@ const UploadPage = () => {
   const [skills, setSkills] = useState("");
   const [prerequisites, setPrerequisites] = useState("");
   const [patreon, setPatreon] = useState("");
-  const [previewImage, setPreviewImage] = useState(null);
+  const [previewImage, setPreviewImage] = useState("");
   const [success, setSuccess]= useState(false)
-  const [resource, setResource] = useState(null)
+  const [resource, setResource] = useState("")
 
   const handleImageUpload = (e) => {
     const file = e.target.files?.[0];
@@ -175,13 +176,28 @@ const UploadPage = () => {
                     <div className="flex text-sm text-gray-400">
                       <label className="cursor-pointer rounded-md font-medium text-cyan-500 hover:text-cyan-400">
                         <span>Upload a file</span>
-                        <input
-                          type="file"
-                          className="sr-only"
-                          onChange={handleImageUpload}
-                          accept="image/*"
-                          id='filevid'
-                        />
+                        <CldUploadWidget
+                          uploadPreset="ajiy2qfo"
+                          onSuccess={(result, { widget }) => {
+                            setResource(result?.info.secure_url);
+                            setPreviewImage(result?.info.secure_url)
+                            console.log(resource)
+                            widget.close();
+                          }}
+                        >
+                          {({ open }) => {
+                            function handleOnClick() {
+                              setResource("");
+                              setPreviewImage("")
+                              open();
+                            }
+                            return (
+                              <button onClick={handleOnClick}>
+                                Upload Course Image
+                              </button>
+                            );
+                          }}
+                        </CldUploadWidget>
                       </label>
                       <p className="pl-1">or drag and drop</p>
                     </div>
