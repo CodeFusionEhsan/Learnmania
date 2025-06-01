@@ -112,7 +112,7 @@ const HomePage = () => {
                     src={`${course.image}`}
                     alt={course.ct}
                     layout="fill"
-                    className="object-cover"
+                    className="h-40 w-full object-cover rounded-t-lg"
                   />
                 </div>
                 <div className="p-4">
